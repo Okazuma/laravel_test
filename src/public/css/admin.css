@@ -1,0 +1,164 @@
+.admin__container{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.admin__inner{
+    
+}
+
+.admin__heading{
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.admin__items{
+    
+
+}
+
+.admin__items-top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 32px;
+    margin-bottom: 24px;
+}
+
+.admin-search__text{
+    
+}
+.admin-search__text input{
+    height: 32px;
+    width: 220px;
+    border: 1px solid #ddd;
+}
+
+.admin-search__gender{
+
+}
+
+.admin-search__gender select{
+    height: 32px;
+    width: 60px;
+    border: 1px solid #ddd;
+}
+
+.admin-search__gender option {
+    color: rgb(125, 100, 70);
+    /* font-size: 10px; */
+}
+
+.admin-search__contact{
+    height: 32px;
+}
+.admin-search__contact select{
+    height: 32px;
+    width: 180px;
+    border: 1px solid #ddd;
+}
+
+.admin-search__date{
+    height: 32px;
+}
+
+.admin-search__date input{
+    height: 32px;
+    width: 120px;
+    border: 1px solid #ddd;
+}
+
+.admin-search__button-search{
+    margin: 0 auto;
+    display: block;
+    width: 80px;
+    height: 32px;
+    background: rgb(135, 115, 100);
+    color: white;
+    border: none;
+
+}
+
+.admin-search__button-edit{
+    margin: 0 auto;
+    display: block;
+    width: 80px;
+    height: 32px;
+    background: rgb(213, 192, 176);
+    color: white;
+    border: none;
+
+}
+
+.admin__items-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+..admin__items-button{
+
+}
+
+.admin__items-button-export{
+    display: inline-block;
+    width: 100px;
+    height: 32px;
+    background: rgb(222, 220, 219);
+    color: rgb(135, 115, 100);
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+}
+
+.admin__item__page-nation{
+
+}
+
+
+.admin__table{
+    width: 100%;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.admin__table-group{
+    
+
+}
+.admin__table-head{
+    background: rgb(135, 115, 100);
+    color: white;
+    
+    font-weight: normal;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin__table-data{
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal_open{
+    border: 1px solid #dbcec2;
+    border-radius: 3px;
+    display: block;
+    text-align: center;
+    color: rgb(195, 182, 161);
+    text-decoration: none;
+}
+
+input::placeholder {
+    color: rgb(150, 125, 100);
+    padding-left: 8px;
+    font-size: 10px;
+}
+select{
+    color: rgb(150, 125, 100);
+    
+}
+input[type="date"]{
+    color: rgb(150, 125, 100);
+}

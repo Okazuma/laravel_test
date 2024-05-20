@@ -1,0 +1,109 @@
+.contact__container {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.contact__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.confirm__table{
+    width: 100%;
+    margin-bottom:32px;
+}
+.confirm__table-row{
+    border: solid 1px rgb(212, 210, 210);
+}
+.confirm__table-head{
+    width: 40%;
+    background:rgb(166, 148, 128);
+    color: white;
+    text-align:left;
+    padding-left: 32px;
+}
+.confirm__table-text{
+    width: 60%;
+    padding: 16px;
+    padding-left: 24px;
+}
+
+.form__button{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.form__button-submit {
+    margin: 0 auto;
+    display: block;
+    width: 140px;
+    height: 40px;
+    background: rgb(135, 115, 100);
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+
+.form__button-edit{
+    width: 160px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    right: 20%;
+    border: none;
+    background: white;
+    text-decoration: underline;
+    border-bottom: 1px;
+    color: rgb(135, 115, 100);
+    font-size: 18px;
+}
+
+.form__group-content {
+    width: 100%;
+}
+
+.form__group-content-name{
+    display:flex;
+}
+
+.form__group-content-tel {
+    display: flex;
+    justify-content:space-between;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+    height: 36px;
+    /* padding: 10px; */
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: white;
+    border: none;
+    color: rgb(135, 115, 100);
+}
+
+.form__input--text-name input {
+        height: 36px;
+        /* padding: 10px; */
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        background: white;
+        border: none;
+        color: rgb(135, 115, 100);
+        display: block;
+}
+
+.form__input--text-name gender {
+    height: 36px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: white;
+    border: none;
+    color: rgb(135, 115, 100);
+}
