@@ -1,10 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\ContactController;
-
-use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 
 use App\Models\Contact;
@@ -22,51 +21,21 @@ use Laravel\Fortify\Fortify;
 |
 */
 
+// お問い合わせフォーム
 Route::get('/',[ContactController::class,'index']);
 Route::post('/confirm',[ContactController::class,'confirm']);
 Route::post('/contacts',[ContactController::class,'store']);
-
-
-
-
-
-
 Route::get('/thanks',[ContactController::class,'thanks']);
-Route::get('/admin',[ContactController::class,'admin']);
 
 
+// Route::post('/login',[AdminController::class,'login']);
+// Route::post('/register',[AdminController::class,'registerMove']);
 
-
+// Fortify 認証機能
 Route::middleware('auth')->group(function () {
-    Route::get('/register',[AuthController::class, 'register']);
+    Route::get('/admin',[AdminController::class, 'index']);
 });
-Route::post('/register',[AuthController::class,'register']);
-Route::get('/register',function(){
-    return view('auth.register');
-});
-Route::get('/login',function(){
-    return view('auth.login');
+Route::middleware(['web'])->group(function(){
+    Route::post('/logout',[AdminController::class,'logout']);
 });
 
-Route::get('/login',[LoginController::class,'/login'])->name('login');
-Route::post('/login',[LoginController::class,'login']);
-Route::get('/register',[RegisterController::class,'showRegistrationForm'])->name('register');
-
-Route::post('/register',[RegisterController::class,'register']);
-
-
-
-
-Route::get('/',[CategoryController::class,'index']);
-
-Route::post('/confirm',[ContactController::class,'confirm']);
-Route::post('/contacts',[ContactController::class,'store']);
-Route::get('/',[ContactController::class,'index'])->name('index');
-
-// Route::get('/',[ContactController::class,'thanks']);
-
-
-
-
-
-Route::get('/confirm',[ContactController::class,'confirm']);

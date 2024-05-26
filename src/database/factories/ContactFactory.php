@@ -34,6 +34,7 @@ class ContactFactory extends Factory
             'detail' =>$sentence,
         ];
     }
-    }
+
+}
 
 

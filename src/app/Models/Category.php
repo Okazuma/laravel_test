@@ -8,12 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
-// protected $fillable = [
-//     'category_id',
-// ]
 
     // public function contact()
     // {
-    //     return $this->hasMany(contact::class);
+    //     return $this->hasMany(Contact::class);
     // }
 }

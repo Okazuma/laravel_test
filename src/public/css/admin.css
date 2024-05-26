@@ -1,20 +1,72 @@
+body {
+    color: rgb(135, 115, 100);
+}
+
+.header {
+    background: white;
+    border-bottom: solid 1px rgb(212, 210, 210);
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 8px 8px;
+    max-width: 1230px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.header__logo {
+    font-family: "Alike", serif;
+    letter-spacing: 0.05em;
+    text-align: center;
+    display: block;
+    color: rgb(125, 100, 70);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.header-nav {
+    align-items: center;
+}
+
+.header-nav__link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-nav__button {
+    font-family: "Alike", serif;
+    letter-spacing: 0.05em;
+    border: 1px solid rgb(215, 205, 185);
+    border-radius: 1px;
+    background: rgb(242, 242, 242);
+    color: rgb(215, 205, 185);
+    font-size: 14px;
+    padding: 2px;
+    width: 72px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+}
+
 .admin__container{
     margin: 0 auto;
     width: 80%;
-}
-
-.admin__inner{
-    
+    margin-bottom: 48px;
 }
 
 .admin__heading{
-    margin-bottom: 40px;
     text-align: center;
-}
-
-.admin__items{
-    
-
+    font-family: "Alike", serif;
+    letter-spacing: 0.05em;
 }
 
 .admin__items-top{
@@ -25,17 +77,10 @@
     margin-bottom: 24px;
 }
 
-.admin-search__text{
-    
-}
 .admin-search__text input{
     height: 32px;
     width: 220px;
     border: 1px solid #ddd;
-}
-
-.admin-search__gender{
-
 }
 
 .admin-search__gender select{
@@ -46,12 +91,12 @@
 
 .admin-search__gender option {
     color: rgb(125, 100, 70);
-    /* font-size: 10px; */
 }
 
 .admin-search__contact{
     height: 32px;
 }
+
 .admin-search__contact select{
     height: 32px;
     width: 180px;
@@ -76,7 +121,6 @@
     background: rgb(135, 115, 100);
     color: white;
     border: none;
-
 }
 
 .admin-search__button-edit{
@@ -87,17 +131,12 @@
     background: rgb(213, 192, 176);
     color: white;
     border: none;
-
 }
 
 .admin__items-bottom{
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
-}
-
-..admin__items-button{
-
 }
 
 .admin__items-button-export{
@@ -110,12 +149,12 @@
     text-decoration: none;
     text-align: center;
     align-items: center;
+    display: block;
 }
 
 .admin__item__page-nation{
-
+    display: block;
 }
-
 
 .admin__table{
     width: 100%;
@@ -123,17 +162,16 @@
     border: 1px solid #ddd;
 }
 
-.admin__table-group{
-    
-
-}
 .admin__table-head{
     background: rgb(135, 115, 100);
     color: white;
-    
     font-weight: normal;
     padding: 8px 16px;
     border-bottom: 1px solid #ddd;
+}
+
+.admin_table-row{
+    height: 54px;
 }
 
 .admin__table-data{
@@ -157,8 +195,8 @@ input::placeholder {
 }
 select{
     color: rgb(150, 125, 100);
-    
 }
+
 input[type="date"]{
     color: rgb(150, 125, 100);
 }

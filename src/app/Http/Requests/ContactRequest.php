@@ -23,6 +23,8 @@ class ContactRequest extends FormRequest
      */
     public function rules()
     {
+// dd($this->all());
+
         return [
             //
             'last_name' => ['required'],
@@ -34,12 +36,7 @@ class ContactRequest extends FormRequest
             'category_id' => ['required'],
             'detail' => ['required','max:120'],
 
-
-
-
-            'tel' => ['required','string','max:5','array'],
-
-
+            // 'tel' => ['required','string'],
 
         ];
     }
@@ -48,28 +45,27 @@ class ContactRequest extends FormRequest
     {
         return [
             'last_name.required' => '姓を入力してください',
-
             'first_name.required' => '名前を入力してください',
-
             'gender.required' => '性別を選択してください',
-
             'email.required' => 'メールアドレスを入力してください',
-            'email.email' => 'メールアドレスはメール形式で入力してください',
+            'email.email' => 'メールアドレスは「ユーザー名@ドメイン」形式で入力してください',
 
             'address.required' => '住所を入力してください',
-
             'category_id.required' => 'お問い合わせの種類を選択してください',
-
             'detail.required' => 'お問い合わせ内容を入力してください',
             'detail.max:120' => 'お問い合わせ内容は120文字以内で入力してください',
-
-
-
-
 
             'tel.required' => '電話番号を入力してください',
             'tel.integer' => '半角数字で入力してください',
             'tel.max:5' => '電話番号は5桁までの数字で入力してください',
         ];
     }
+
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'tel' => $this->input('tel_left').$this->input('tel_middle').$this->input('tel_right'),
+        ]);
+    }
+
 }
