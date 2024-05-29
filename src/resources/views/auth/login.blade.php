@@ -45,9 +45,9 @@
                             <input type="email" name="email" placeholder="例:test@example.com" value="{{ old('email') }}">
                             </div>
                             <div class="form__error">
-                                @error('email')
+                                <!-- @error('email')
                                 {{ $message }}
-                                @enderror
+                                @enderror -->
                             </div>
                         </div>
 

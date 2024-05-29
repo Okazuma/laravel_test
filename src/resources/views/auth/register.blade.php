@@ -36,7 +36,7 @@
                 <div class="register__heading">
                     <h2>Register</h2>
                 </div>
-                
+
 
                 <div class="register__content">
                     <form class="register__form" action="/register" method="post">
@@ -47,9 +47,9 @@
                                 <input type="text" name="name" placeholder="例:山田太郎" value="{{ old('name') }}">
                             </div>
                             <div class="form__error">
-                                @error('name')
+                                <!-- @error('name')
                                 {{ $message }}
-                                @enderror
+                                @enderror -->
                             </div>
                         </div>
 

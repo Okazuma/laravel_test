@@ -1,15 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\AdminController;
 use App\Http\Controllers\CategoryController;
-
 use App\Models\Contact;
 use Laravel\Fortify\Fortify;
-
-
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,21 +19,68 @@ use Laravel\Fortify\Fortify;
 |
 */
 
-// お問い合わせフォーム
+// お問い合わせフォームーーーーー
+
 Route::get('/',[ContactController::class,'index']);
+
 Route::post('/confirm',[ContactController::class,'confirm']);
+
 Route::post('/contacts',[ContactController::class,'store']);
+
 Route::get('/thanks',[ContactController::class,'thanks']);
 
+// ーーーーー
 
-// Route::post('/login',[AdminController::class,'login']);
-// Route::post('/register',[AdminController::class,'registerMove']);
 
-// Fortify 認証機能
+// Fortify 認証機能ーーーーー
+
 Route::middleware('auth')->group(function () {
     Route::get('/admin',[AdminController::class, 'index']);
 });
+
 Route::middleware(['web'])->group(function(){
     Route::post('/logout',[AdminController::class,'logout']);
 });
+
+// ーーーーー
+
+
+// メール認証機能ーーーーー
+
+Route::get('/email/verify',function(){
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+
+Route::get('/email/verify/{id}/{hash}',function(EmailVerificationRequest $request){
+    $request->fulfill();
+    return redirect('/home');
+})->middleware(['auth','signed'])->name('verification.verify');
+
+Route::post('/email/verification->notification', function(Request $request){
+    $request->user()->sendEmailVerificationNotification();
+    return back()->with('message','Verification link sent!');
+})->middleware(['auth','throttle:6,1'])->name('verification.send');
+
+Route::post('admin',[AdminController::class,'verifyEmail']);
+
+Route::get('/email/verify/{id}/{hash}',[AdminController::class,'verifyEmail'])->middleware(['auth','signed'])->name('verification.verify');
+
+// ーーーーー
+
+
+
+
+// 登録フォーム表示のルートーーーーー
+
+Route::get('register',[AdminController::class,'showRegistrationForm'])->name('register');
+
+Route::post('register',[AdminController::class,'register']);
+
+Route::post('admin',[AdminController::class,'login']);
+
+Route::get('success',function(){
+    return view('auth.success');
+})->name('success');
+
+// ーーーーー
 

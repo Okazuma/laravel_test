@@ -47,7 +47,8 @@ class ContactController extends Controller
         $contact->category_id = $request->input('category_id');
         $contact->detail = $request->input('detail');
 
-        $contact->save();
+        dd($contact);
+        // $contact->save();
         return redirect('/thanks');
     }
 

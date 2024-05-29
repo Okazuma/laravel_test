@@ -122,7 +122,7 @@
             </div>
             <div class="form__group-content-tel">
               <div class="form__input--text-tel">
-                <input type="text" name="tel_left" placeholder="o8o" value="{{ old('tel_left')}}"/>
+                <input type="text" name="tel_left" placeholder="080" value="{{ old('tel_left')}}"/>
               </div>
                 <span class="form__label--tel">-</span>
               <div class="form__input--text-tel">
@@ -138,15 +138,15 @@
             <div class="error__inner">
               <div class="error__item">
                 <!-- バリデーション機能 -->
-                <!-- @error('tel')
+                @error('tel_left')
                   {{ $message }}
-                @enderror -->
-              <!-- @error('tel_middle')
+                @enderror
+                @error('tel_middle')
                 {{ $message }}
-              @enderror
-              @error('tel_right')
-                {{ $message }}
-              @enderror -->
+                @enderror
+                @error('tel_right')
+                  {{ $message }}
+                @enderror
               </div>
             </div>
           </div>
@@ -162,7 +162,6 @@
               <div class="form__input--text">
                 <input type="text" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address')}}"/>
               </div>
-
             </div>
           </div>
           <div class="error__container">

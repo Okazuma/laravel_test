@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Contracts\Validation\Validator;
+
 
 class ContactRequest extends FormRequest
 {
@@ -36,7 +38,15 @@ class ContactRequest extends FormRequest
             'category_id' => ['required'],
             'detail' => ['required','max:120'],
 
-            // 'tel' => ['required','string'],
+            'tel_left' => ['bail','required','string'],
+            'tel_middle' => ['bail','required','string'],
+            'tel_right' => ['bail','required','string'],
+
+
+
+
+
+
 
         ];
     }
@@ -55,9 +65,27 @@ class ContactRequest extends FormRequest
             'detail.required' => 'お問い合わせ内容を入力してください',
             'detail.max:120' => 'お問い合わせ内容は120文字以内で入力してください',
 
-            'tel.required' => '電話番号を入力してください',
-            'tel.integer' => '半角数字で入力してください',
-            'tel.max:5' => '電話番号は5桁までの数字で入力してください',
+            // 'tel.required' => '電話番号を入力してください',
+            // 'tel.integer' => '半角数字で入力してください',
+            // 'tel.max:5' => '電話番号は5桁までの数字で入力してください',
+
+
+
+            'tel_left.required' => '電話番号の左側の欄を入力してください',
+            // 'tel_left.integer' => '半角数字で入力してください',
+            // 'tel_left.max:5' => '電話番号は5桁までの数字で入力してください',
+
+            'tel_middle.required' => '電話番号の中央欄入力してください',
+            // 'tel_middle.integer' => '半角数字で入力してください',
+            // 'tel_middle.max:5' => '電話番号は5桁までの数字で入力してください',
+
+            'tel_right.required' => '電話番号の欄を入力してください',
+            // 'tel_right.integer' => '半角数字で入力してください',
+            // 'tel_right.max:5' => '電話番号は5桁までの数字で入力してください',
+
+
+
+
         ];
     }
 
