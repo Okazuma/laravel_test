@@ -10,7 +10,7 @@
     
 dockerビルド  
 =====
-    1 git clone リンク　　https://github.com/Okazuma/laravel_test.git  
+    1 git clone リンク 　　https://github.com/Okazuma/laravel_test.git  
     
     2 docker-compose up -d --build  
     
@@ -48,5 +48,7 @@ ER図
 
 phpMyAdmin   http://localhost:8080  
 -----
+
+
 
 
