@@ -29,7 +29,7 @@ Laravel環境構築
 
 ER図  
 =====
-    ![laravel-test](https://github.com/Okazuma/laravel_test/assets/160417297/57fc1b28-8b4d-453c-92c4-ecd483aaad84)  
+    ![laravel-test(https://github.com/Okazuma/laravel_test/assets/160417297/57fc1b28-8b4d-453c-92c4-ecd483aaad84)  
 
 開発環境 http://localhost/  
 =====
