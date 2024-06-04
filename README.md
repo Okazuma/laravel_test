@@ -29,6 +29,7 @@ Laravel環境構築
     5 マイグレーション            $php artisan migrate  
     
     6 シーディング               $php artisan db:seed  
+<<<<<<< HEAD
 
 使用技術  
 =====
@@ -41,6 +42,7 @@ Laravel環境構築
 ER図  
 =====
 ![laravel-test](https://github.com/Okazuma/laravel_test/assets/160417297/0601e39a-fcd4-42ac-a63a-37a6885b512d) 
+=======
 
 
 開発環境   http://localhost/  
