@@ -21,19 +21,20 @@ Laravel環境構築
     5 マイグレーション            $php artisan migrate  
     6 シーディング               $php artisan db:seed  
 
-##使用技術  
+使用技術  
 =====
     Laravel8.83  
     php 7.4.9  
     Mysql 8.0.26  
 
-##ER図  
+ER図  
 =====
     ![laravel-test](https://github.com/Okazuma/laravel_test/assets/160417297/57fc1b28-8b4d-453c-92c4-ecd483aaad84)  
 
-##開発環境 http://localhost/  
+開発環境 http://localhost/  
 =====
-##phpMyAdmin http://localhost:8080  
+
+phpMyAdmin http://localhost:8080  
 =====
 
 
