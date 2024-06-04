@@ -61,6 +61,9 @@ body {
     margin: 0 auto;
     width: 80%;
     margin-bottom: 48px;
+/* ああああああああああああああああああああああ */
+    position: relative;
+
 }
 
 .admin__heading{
@@ -73,7 +76,7 @@ body {
     width: 100%;
 
 }
-.admin__items-top{
+.admin__form-group{
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -137,7 +140,7 @@ body {
     border: none;
 }
 
-.admin__items-bottom{
+.admin__form__items{
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
@@ -183,7 +186,10 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-.modal_open{
+
+
+
+.modal_open-btn {
     border: 1px solid #dbcec2;
     border-radius: 3px;
     display: block;
@@ -203,4 +209,116 @@ select{
 
 input[type="date"]{
     color: rgb(150, 125, 100);
+}
+
+.modal-dialog{
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    min-height: auto;
+    background:white;
+    font-size:14px;
+}
+
+.modal-content{
+    margin: auto;
+    width: 50vw;
+    min-height: auto;
+    border: 0.5px solid rgb(110, 80, 60);
+    background-color: #fff;
+    opacity: 1;
+    color: rgb(135, 115, 100);
+    font-size: 18px;
+}
+
+.modal-body{
+    width: 100%;
+    padding: 32px 48px;
+    min-height: auto;
+}
+
+.modal-body-inner{
+    margin: 36px auto;
+}
+.modal.fade {
+    border: none;
+}
+.modal-hidden .modal-content {
+    display: none;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: rgb(110, 80, 60);
+    opacity: 1;
+    cursor: pointer;
+    background: white;
+    border: 1px solid rgb(110, 80, 60);
+    border-radius: 50%;
+    border-width: thin;
+}
+
+.modal-row-name{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+}
+
+.modal-row{
+    display:flex;
+    width: 100%;
+    height:56px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-row__tag{
+    width: 20%;
+    font-weight: bold;
+}
+
+.modal-row__content-name {
+    width: 70%;
+    display: flex;
+}
+
+.modal-row__content {
+    width: 70%;
+    display: flex;
+}
+
+.modal-row__item-name {
+    display: block;
+    padding-left: 20px;
+}
+
+.modal-row__item{
+    display:block;
+    padding-left: 20px;
+}
+
+.modal-row__button{
+    margin: 20px auto;
+}
+
+.deleteBtn {
+    width: 60px;
+    background: rgb(215, 70, 70);
+    color: rgb(215, 211, 211);
+    justify-content: center;
+    display: block;
+    margin: 0 auto;
+    border: none;
 }

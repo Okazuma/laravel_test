@@ -47,9 +47,9 @@
                                 <input type="text" name="name" placeholder="例:山田太郎" value="{{ old('name') }}">
                             </div>
                             <div class="form__error">
-                                <!-- @error('name')
+                                @error('name')
                                 {{ $message }}
-                                @enderror -->
+                                @enderror
                             </div>
                         </div>
 

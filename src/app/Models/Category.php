@@ -9,8 +9,8 @@ class Category extends Model
 {
     use HasFactory;
 
-    // public function contact()
-    // {
-    //     return $this->hasMany(Contact::class);
-    // }
+    public function contacts()
+    {
+        return $this->hasMany(Contact::class);
+    }
 }

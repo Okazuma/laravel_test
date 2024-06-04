@@ -14,11 +14,19 @@ class ContactFactory extends Factory
      */
     public function definition()
     {
-        // $faker = FakerFactory::create('ja_JP');
+        $faker = $this->faker;
 
         $categoryIds = [1,2,3,4,5];
         $categoryId = $this->faker->randomElement($categoryIds);
         $sentence = 'ご対応よろしくお願いいたします。';
+
+        $prefecture = $this->faker->prefecture();  // 都道府県
+        $city = $this->faker->city();  // 市区町村
+        $ward = $this->faker->ward();  // 区
+        $town = $this->faker->streetName();  // 町名
+        $buildingNumber = $this->faker->buildingNumber();  // 番地
+
+        $address = "{$prefecture}{$city}{$ward}{$town}{$buildingNumber}";
 
 
 
@@ -30,7 +38,7 @@ class ContactFactory extends Factory
             'gender' =>$this->faker->randomElement([1,2,3]),
             'email' =>$this->faker->safeEmail(),
             'tel' =>$this->faker->phoneNumber(),
-            'address' =>$this->faker->address(),
+            'address' => $address,
             'detail' =>$sentence,
         ];
     }

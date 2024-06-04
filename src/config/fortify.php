@@ -3,6 +3,7 @@
 use App\Providers\RouteServiceProvider;
 use Laravel\Fortify\Features;
 
+
 return [
 
     /*
@@ -75,6 +76,7 @@ return [
     */
 
     'home' => '/login',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -162,7 +164,8 @@ return [
         'registration'=>'/success',
 
         'home' => '/admin',
-    ]
+    ],
+
 
 
 

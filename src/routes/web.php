@@ -8,6 +8,10 @@ use App\Models\Contact;
 use Laravel\Fortify\Fortify;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\LoginRequest;
+use App\Http\Controllers\ModalController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +36,7 @@ Route::get('/thanks',[ContactController::class,'thanks']);
 // ーーーーー
 
 
+
 // Fortify 認証機能ーーーーー
 
 Route::middleware('auth')->group(function () {
@@ -42,7 +47,10 @@ Route::middleware(['web'])->group(function(){
     Route::post('/logout',[AdminController::class,'logout']);
 });
 
+Route::post('/login', [AdminController::class, 'login']);
+
 // ーーーーー
+
 
 
 // メール認証機能ーーーーー
@@ -69,8 +77,7 @@ Route::get('/email/verify/{id}/{hash}',[AdminController::class,'verifyEmail'])->
 
 
 
-
-// 登録フォーム表示のルートーーーーー
+// 登録フォーム表示ーーーーー
 
 Route::get('register',[AdminController::class,'showRegistrationForm'])->name('register');
 
@@ -83,4 +90,38 @@ Route::get('success',function(){
 })->name('success');
 
 // ーーーーー
+
+
+
+// 検索機能
+
+Route::get('/search',[AdminController::class,'search']);
+
+// ーーーーー
+
+
+
+// モーダル
+
+Route::get('/contact/details', [App\Http\Controllers\ModalController::class, 'details'])->name('contact.details');
+
+Route::post('/contact/details', [App\Http\Controllers\ModalController::class, 'delete']);
+
+Route::post('/contact/delete', [App\Http\Controllers\ModalController::class, 'delete']);
+
+// ーーーーー
+
+
+
+// エクスポート
+
+Route::get('/export/data', [ModalController::class, 'exportData']);
+
+// ーーーーー
+
+
+
+
+
+
 
