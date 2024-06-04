@@ -1,18 +1,18 @@
-#環境構築　　
+環境構築　　
 =====
-###アプリケーション名  
+##アプリケーション名  
 =====
     1 ログイン認証機能  
     2 お問い合わせフォーム  
     3 お問い合わせ管理機能  
     
-###dockerビルド  
+dockerビルド  
 =====
     1 git clone リンク　　https://github.com/Okazuma/laravel_test.git  
     2 docker-compose up -d --build  
     *MysqlはOSによって起動しない場合があるので、それぞれのPCに合わせてdocker-compose.ymlを編集してください
 
-##Laravel環境構築  
+Laravel環境構築  
 =====
     1 phpコンテナにログイン       $docker-compose exec php bash  
     2 パッケージのインストール     $composer-install  
